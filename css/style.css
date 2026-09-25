@@ -6,17 +6,6 @@
 // 03 - Preloader
 /////////////////////////////////////////////////////////////////////*/
 
-#preloader {
-    position:fixed;
-    left:0;
-    top:0;
-    z-index:99999999999;
-    width:100%;
-    height:100%;
-    overflow:visible;
-    background: #fff url('../img/preloader.gif') no-repeat center center;
-}
-
 
 
 /* ==========================================================================
@@ -486,6 +475,7 @@ table {
 .hero {
 	background: url('../img/DSC_0183_3.png') right bottom no-repeat;
 	background-size: contain;
+	background-position: 85% bottom;
 	padding:110px 0 100px 0;
 	height:auto;
 	background-color: #FBFBFB;
@@ -1266,4 +1256,334 @@ ul.slides li {
 	.subscribe {
 	    padding-bottom: 40px;
 	}
+}
+
+/* ==========================================================
+   RESPONSIVE - MATI ZARANTO
+   ========================================================== */
+
+@media screen and (max-width: 767px) {
+
+    /* ---------- GENERAL ---------- */
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .section-padding {
+        padding: 60px 20px 70px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        padding: 80px 20px 40px;
+        background-size: contain;
+        background-position: center bottom;
+    }
+
+    .hero h1 {
+        font-size: 56px;
+        line-height: 55px;
+        letter-spacing: -3px;
+        margin-top: 30px;
+    }
+
+    .hero h3 {
+        font-size: 13px;
+        line-height: 25px;
+        letter-spacing: 5px;
+    }
+
+    .hero p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+
+    /* ---------- TITULOS ---------- */
+
+    h1 {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    h1.arrow {
+        font-size: 14px;
+        letter-spacing: 2px;
+        padding-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h6 {
+        font-size: 15px;
+        line-height: 1.4;
+    }
+
+
+    /* ---------- TEXTOS ---------- */
+
+    p {
+        font-size: 15px;
+        line-height: 26px !important;
+    }
+
+
+    /* ---------- ABOUT ---------- */
+
+    .about-text {
+        padding: 30px 25px;
+    }
+
+    .about-image {
+        height: 280px;
+    }
+
+
+    /* ---------- SERVICES ---------- */
+
+    .services {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .services .icon {
+        width: 130px;
+        height: 130px;
+        line-height: 130px;
+        font-size: 42px;
+        margin-bottom: 25px;
+    }
+
+    .features-wrapper {
+        margin-top: 40px;
+    }
+
+
+    /* ---------- PORTFOLIO ---------- */
+
+    .swag {
+        padding: 55px 20px;
+    }
+
+    .swag h1 {
+        letter-spacing: 2px;
+    }
+
+    .swag h1 span {
+        font-size: 18px;
+    }
+
+    .portfolio img {
+        height: auto;
+        min-height: 0;
+    }
+
+    .effects {
+        padding-left: 0;
+    }
+
+    .effects .img {
+        margin-bottom: 15px;
+    }
+
+
+    /* ---------- MENU ---------- */
+
+    .menu-button,
+    .menu-wrap {
+        font-size: 1.3em;
+    }
+
+    .icon-list {
+        padding: 2em 1em;
+        float: none;
+        text-align: center;
+    }
+
+    .icon-list a {
+        margin: 0 8px;
+    }
+
+
+    /* ---------- CONTACTO ---------- */
+
+    .contact-details {
+        margin: 40px 0;
+    }
+
+    .contact-details h2 {
+        font-size: 18px;
+    }
+
+    .contact textarea.form-control {
+        height: 200px;
+    }
+
+    .btn-send {
+        width: 100%;
+        float: none;
+        margin-bottom: 30px;
+        padding: 14px 20px;
+    }
+
+
+    /* ---------- CTA ---------- */
+
+    .spacer-cta {
+        padding: 50px 20px;
+    }
+
+    .outline-btn,
+    .weight-outline-btn {
+        width: 100%;
+        text-align: center;
+        padding: 18px 20px;
+    }
+
+
+    /* ---------- SUSCRIPCIÓN ---------- */
+
+    .subscribe {
+        padding: 50px 20px;
+    }
+
+    .subscribe input[type="text"] {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+
+    /* ---------- WHATSAPP ---------- */
+
+    .whatsapp-float {
+        width: 52px;
+        height: 52px;
+        right: 18px;
+        bottom: 18px;
+        font-size: 25px;
+    }
+
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    .hero h1 {
+        font-size: 80px;
+        line-height: 75px;
+        letter-spacing: -5px;
+    }
+
+    .hero h3 {
+        letter-spacing: 10px;
+    }
+
+    .about-text {
+        padding: 30px;
+    }
+
+    .section-padding {
+        padding: 70px 30px 80px;
+    }
+
+}
+
+/* =========================================
+   HERO - AJUSTE PARA CELULARES
+   ========================================= */
+
+@media (max-width: 767px) {
+
+    .hero {
+        min-height: 650px;
+        padding: 100px 20px 80px;
+        background-position: center bottom;
+        background-size: 75% auto;
+    }
+
+    .hero .inner {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+    }
+
+    .hero h1 {
+        font-size: 58px !important;
+        line-height: 58px !important;
+        letter-spacing: -3px !important;
+        margin: 0 0 20px 0;
+    }
+
+    .hero h3 {
+        font-size: 13px !important;
+        line-height: 20px !important;
+        letter-spacing: 4px !important;
+        margin: 0;
+    }
+
+    .hero .navicon {
+        position: relative;
+        z-index: 10;
+    }
+}
+
+
+/* =========================================
+   CELULARES CHICOS
+   ========================================= */
+
+@media (max-width: 767px) {
+
+    .hero {
+        min-height: 650px;
+        padding: 100px 20px 80px;
+        background-position: center bottom;
+        background-size: 70% auto;
+    }
+
+    .hero h1 {
+        font-size: 55px !important;
+        line-height: 55px !important;
+        letter-spacing: -3px !important;
+    }
+
+    .hero h3 {
+        font-size: 12px !important;
+        letter-spacing: 4px !important;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .effects .img {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .effects .img img {
+        display: block;
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+        transform: none !important;
+        margin: 0 !important;
+    }
+
 }
