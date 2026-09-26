@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://matizaranto.com.ar/sitemap.xml
