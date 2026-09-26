@@ -1587,3 +1587,35 @@ ul.slides li {
     }
 
 }
+
+#about .about-text p {
+    font-size: 27px;
+    line-height: 2.3;
+    color: #66615b;
+    margin-bottom: 45px;
+    font-weight: 400;
+}
+
+#about .about-text p:first-child {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 36px;
+    line-height: 1.7;
+    color: #33312f;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 767px) {
+
+    #about .about-text p {
+        font-size: 21px;
+        line-height: 2.1;
+        margin-bottom: 38px;
+    }
+
+    #about .about-text p:first-child {
+        font-size: 28px;
+        line-height: 1.65;
+        margin-bottom: 42px;
+    }
+
+}
