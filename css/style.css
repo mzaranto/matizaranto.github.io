@@ -1588,34 +1588,44 @@ ul.slides li {
 
 }
 
+#about .about-text {
+    max-width: 850px;
+    margin: 50px auto 0;
+    text-align: center;
+}
+
 #about .about-text p {
-    font-size: 27px;
-    line-height: 2.3;
+    font-size: 20px;
+    line-height: 2;
     color: #66615b;
-    margin-bottom: 45px;
+    margin: 0 0 38px;
     font-weight: 400;
 }
 
-#about .about-text p:first-child {
+#about .about-text .about-intro {
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 36px;
-    line-height: 1.7;
+    font-size: 32px;
+    line-height: 1.55;
     color: #33312f;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
 }
 
 @media (max-width: 767px) {
 
+    #about .about-text {
+        max-width: 100%;
+        margin-top: 35px;
+    }
+
     #about .about-text p {
-        font-size: 21px;
-        line-height: 2.1;
+        font-size: 18px;
+        line-height: 1.9;
+        margin-bottom: 32px;
+    }
+
+    #about .about-text .about-intro {
+        font-size: 25px;
+        line-height: 1.55;
         margin-bottom: 38px;
     }
-
-    #about .about-text p:first-child {
-        font-size: 28px;
-        line-height: 1.65;
-        margin-bottom: 42px;
-    }
-
 }
