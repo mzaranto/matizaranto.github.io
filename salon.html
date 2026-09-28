@@ -17,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Magia de Salón y Escena en Rosario | Mati Zaranto</title>
-
+<link rel="icon" type="image/png" href="img/mz.png">
     <meta name="description"
         content="Show de magia, ilusionismo y mentalismo de salón y escena para eventos en Rosario y alrededores. Un espectáculo participativo, visual y adaptable para público adulto.">
 
@@ -370,15 +370,14 @@
         Mati Zaranto · Magia, Ilusionismo y Mentalismo
 
     </footer>
-
 <script>
 document.addEventListener('DOMContentLoaded', function () {
 
     // WhatsApp
-    document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function (link) {
+    document.querySelectorAll('a[href*="wa.me"]').forEach(function (link) {
         link.addEventListener('click', function () {
             gtag('event', 'whatsapp_click', {
-                link_location: window.location.pathname
+                page_location: window.location.pathname
             });
         });
     });
@@ -387,16 +386,43 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('a[href*="instagram.com"]').forEach(function (link) {
         link.addEventListener('click', function () {
             gtag('event', 'instagram_click', {
-                link_location: window.location.pathname
+                page_location: window.location.pathname
+            });
+        });
+    });
+
+    // Email
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+            gtag('event', 'email_click', {
+                page_location: window.location.pathname
+            });
+        });
+    });
+
+    // Página de Close Up
+    document.querySelectorAll('a[href="closeup.html"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+            gtag('event', 'closeup_click', {
+                page_location: window.location.pathname
+            });
+        });
+    });
+
+    // Página de Salón
+    document.querySelectorAll('a[href="salon.html"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+            gtag('event', 'salon_click', {
+                page_location: window.location.pathname
             });
         });
     });
 
     // Consultar disponibilidad
-    document.querySelectorAll('.show-cta-button').forEach(function (link) {
+    document.querySelectorAll('a[href*="#contacto"]').forEach(function (link) {
         link.addEventListener('click', function () {
             gtag('event', 'consulta_disponibilidad', {
-                link_location: window.location.pathname
+                page_location: window.location.pathname
             });
         });
     });
