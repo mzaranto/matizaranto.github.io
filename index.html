@@ -518,6 +518,98 @@
         });
     </script>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    function enviarEvento(nombre, datos, callback) {
+        gtag('event', nombre, {
+            ...datos,
+            transport_type: 'beacon',
+            event_callback: callback
+        });
+    }
+
+    // WHATSAPP
+    document.querySelectorAll('a[href*="wa.me"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+
+            enviarEvento('whatsapp_click', {
+                pagina: window.location.pathname
+            });
+
+        });
+    });
+
+    // INSTAGRAM
+    document.querySelectorAll('a[href*="instagram.com"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+
+            enviarEvento('instagram_click', {
+                pagina: window.location.pathname
+            });
+
+        });
+    });
+
+    // EMAIL
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+
+            enviarEvento('email_click', {
+                pagina: window.location.pathname
+            });
+
+        });
+    });
+
+    // CLOSE UP
+    document.querySelectorAll('a[href="closeup.html"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+
+            var destino = this.href;
+
+            enviarEvento('closeup_click', {
+                pagina: window.location.pathname
+            }, function () {
+                window.location.href = destino;
+            });
+
+        });
+    });
+
+    // SALÓN
+    document.querySelectorAll('a[href="salon.html"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+
+            var destino = this.href;
+
+            enviarEvento('salon_click', {
+                pagina: window.location.pathname
+            }, function () {
+                window.location.href = destino;
+            });
+
+        });
+    });
+
+    // CONSULTAR DISPONIBILIDAD
+    document.querySelectorAll('a[href*="#contacto"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+
+            var destino = this.href;
+
+            enviarEvento('consulta_disponibilidad', {
+                pagina: window.location.pathname
+            }, function () {
+                window.location.href = destino;
+            });
+
+        });
+    });
+
+});
+</script>
+
 </body>
 
 </html>
