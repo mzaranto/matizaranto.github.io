@@ -2,6 +2,15 @@
 <html lang="es">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0EGZ3QR1SS"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-0EGZ3QR1SS');
+    </script>
 
     <meta charset="utf-8">
 
@@ -53,15 +62,7 @@
 
 </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0EGZ3QR1SS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-0EGZ3QR1SS');
-</script>
 
 <body>
 
@@ -370,7 +371,38 @@
 
     </footer>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
 
+    // WhatsApp
+    document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+            gtag('event', 'whatsapp_click', {
+                link_location: window.location.pathname
+            });
+        });
+    });
+
+    // Instagram
+    document.querySelectorAll('a[href*="instagram.com"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+            gtag('event', 'instagram_click', {
+                link_location: window.location.pathname
+            });
+        });
+    });
+
+    // Consultar disponibilidad
+    document.querySelectorAll('.show-cta-button').forEach(function (link) {
+        link.addEventListener('click', function () {
+            gtag('event', 'consulta_disponibilidad', {
+                link_location: window.location.pathname
+            });
+        });
+    });
+
+});
+</script>
 </body>
 
 </html>
