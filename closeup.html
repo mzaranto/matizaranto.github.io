@@ -2,6 +2,15 @@
 <html lang="es">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0EGZ3QR1SS"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-0EGZ3QR1SS');
+    </script>
 
     <meta charset="utf-8">
 
@@ -53,15 +62,7 @@
 
 </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0EGZ3QR1SS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-0EGZ3QR1SS');
-</script>
 
 <body>
 
@@ -370,8 +371,65 @@
         Mati Zaranto · Magia, Ilusionismo y Mentalismo
 
     </footer>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
 
+    // WhatsApp
+    document.querySelectorAll('a[href*="wa.me"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+            gtag('event', 'whatsapp_click', {
+                page_location: window.location.pathname
+            });
+        });
+    });
 
+    // Instagram
+    document.querySelectorAll('a[href*="instagram.com"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+            gtag('event', 'instagram_click', {
+                page_location: window.location.pathname
+            });
+        });
+    });
+
+    // Email
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+            gtag('event', 'email_click', {
+                page_location: window.location.pathname
+            });
+        });
+    });
+
+    // Página de Close Up
+    document.querySelectorAll('a[href="closeup.html"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+            gtag('event', 'closeup_click', {
+                page_location: window.location.pathname
+            });
+        });
+    });
+
+    // Página de Salón
+    document.querySelectorAll('a[href="salon.html"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+            gtag('event', 'salon_click', {
+                page_location: window.location.pathname
+            });
+        });
+    });
+
+    // Consultar disponibilidad
+    document.querySelectorAll('a[href*="#contacto"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+            gtag('event', 'consulta_disponibilidad', {
+                page_location: window.location.pathname
+            });
+        });
+    });
+
+});
+</script>
 </body>
 
 </html>
