@@ -2515,3 +2515,141 @@ ul.slides li {
 	}
 
 }
+
+/* ==========================================================================
+   MENTALISMO
+   Estilos adicionales para mentalismo.html
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   BLOQUES DE INFORMACIÓN
+   -------------------------------------------------------------------------- */
+
+.show-details {
+    padding: 100px 20px;
+    background: #f7f7f5;
+    text-align: center;
+}
+
+.show-details-inner {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.show-details .show-label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.show-details h2 {
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.show-details p {
+    max-width: 760px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+    line-height: 1.9;
+    color: #555;
+}
+
+
+/* --------------------------------------------------------------------------
+   ENLACES DE TEXTO
+   -------------------------------------------------------------------------- */
+
+.show-text-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #353535;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 1px solid #353535;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.show-text-link:hover,
+.show-text-link:focus {
+    color: #E04343;
+    border-color: #E04343;
+    text-decoration: none;
+}
+
+
+/* --------------------------------------------------------------------------
+   FAQ
+   -------------------------------------------------------------------------- */
+
+.faq-preview {
+    max-width: 760px;
+    margin: 50px auto 35px;
+    text-align: left;
+}
+
+.faq-preview h3 {
+    margin: 0;
+    padding: 25px 0 12px;
+    font-size: 19px;
+    line-height: 1.5;
+    font-weight: 600;
+    color: #353535;
+    border-top: 1px solid #d8d8d6;
+}
+
+.faq-preview h3:first-child {
+    padding-top: 0;
+    border-top: none;
+}
+
+.faq-preview p {
+    margin: 0 0 25px;
+    max-width: none;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #66615b;
+}
+
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE
+   -------------------------------------------------------------------------- */
+
+@media screen and (max-width: 767px) {
+
+    .show-details {
+        padding: 70px 25px;
+    }
+
+    .show-details h2 {
+        margin-bottom: 25px;
+    }
+
+    .show-details p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .show-text-link {
+        font-size: 12px;
+    }
+
+    .faq-preview {
+        margin-top: 35px;
+    }
+
+    .faq-preview h3 {
+        font-size: 17px;
+        padding-top: 22px;
+    }
+
+    .faq-preview p {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+}
