@@ -1,0 +1,815 @@
+/* =========================================================
+   MATI ZARANTO · CLOSE-UP + SHOW DE SALÓN
+   Sistema visual alineado con closeup.html
+   Se conservan las clases cs-* y el contenido de la página.
+   ========================================================= */
+
+:root {
+  --cs-bg: #f8f7f4;
+  --cs-bg-soft: #eeece7;
+  --cs-ink: #25221f;
+  --cs-muted: #77716b;
+  --cs-bronze: #a18465;
+  --cs-line: #ded9d1;
+  --cs-dark: #171513;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 30px;
+}
+
+body.closeup-salon-page {
+  margin: 0;
+  background: var(--cs-bg);
+  color: var(--cs-ink);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+.closeup-salon-page img,
+.closeup-salon-page video {
+  display: block;
+  max-width: 100%;
+}
+
+.closeup-salon-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* HEADER — misma línea que .inner-header de closeup.html */
+
+.cs-header {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 76px;
+  padding: 0 5.5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #faf9f6;
+  border-bottom: 1px solid rgba(37, 34, 31, .06);
+}
+
+.cs-logo {
+  color: var(--cs-ink) !important;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  white-space: nowrap;
+}
+
+.cs-back {
+  min-height: 42px;
+  padding: 8px 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 1px solid #d7c9b8;
+  color: var(--cs-ink) !important;
+  font-size: 11px;
+  letter-spacing: .02em;
+  transition: background .3s ease, color .3s ease, border-color .3s ease;
+}
+
+.cs-back:hover {
+  background: var(--cs-dark);
+  border-color: var(--cs-dark);
+  color: #fff !important;
+}
+
+.cs-back-arrow {
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* HERO — proporción, tipografía y contraste de la portada interna */
+
+.cs-hero {
+  position: relative;
+  width: 100%;
+  min-height: 590px;
+  height: 64vh;
+  max-height: 700px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--cs-dark);
+}
+
+.cs-hero-image {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background-image: url("../img/portfolio/closeupescena.png");
+  background-size: cover;
+  background-position: center 42%;
+  transform: scale(1.01);
+}
+
+.cs-hero-overlay {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(15, 13, 12, .92) 0%,
+    rgba(15, 13, 12, .76) 38%,
+    rgba(15, 13, 12, .34) 72%,
+    rgba(15, 13, 12, .12) 100%
+  );
+}
+
+.cs-hero-content {
+  position: relative;
+  z-index: 1;
+  width: min(760px, 82%);
+  margin-left: max(9%, calc((100vw - 1320px) / 2));
+  padding: 35px 0 20px;
+  color: #fff;
+}
+
+.cs-eyebrow {
+  display: block;
+  margin: 0 0 22px;
+  color: var(--cs-bronze);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.6px;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+.cs-hero .cs-eyebrow {
+  color: #d6b995;
+  margin-bottom: 25px;
+}
+
+.cs-hero h1 {
+  margin: 0 0 24px;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(58px, 7.1vw, 100px);
+  font-weight: 400;
+  line-height: .99;
+  letter-spacing: -.035em;
+}
+
+.cs-hero h1 em,
+.cs-intro h2 em,
+.cs-moment h2 em,
+.cs-statement h2 em,
+.cs-events h2 em,
+.cs-contact h2 em {
+  font-weight: 400;
+}
+
+.cs-hero h1 em {
+  color: #d5ad86;
+}
+
+.cs-hero-content > p {
+  max-width: 650px;
+  margin: 0 0 30px;
+  color: rgba(255,255,255,.9);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(19px, 2vw, 27px);
+  line-height: 1.45;
+}
+
+.cs-button {
+  min-height: 54px;
+  padding: 14px 21px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border: 1px solid rgba(255,255,255,.72);
+  background: transparent;
+  color: #fff !important;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  transition: background .3s ease, color .3s ease, border-color .3s ease;
+}
+
+.cs-button:hover {
+  background: #fff;
+  border-color: #fff;
+  color: var(--cs-dark) !important;
+}
+
+.cs-button span,
+.cs-button i { font-size: 17px; }
+
+.cs-button-dark {
+  border-color: var(--cs-ink);
+  background: var(--cs-ink);
+  color: #fff !important;
+}
+
+.cs-button-dark:hover {
+  background: transparent;
+  color: var(--cs-ink) !important;
+}
+
+/* INTRO — dos columnas como la introducción de closeup.html */
+
+.cs-intro {
+  width: min(1320px, calc(100% - 100px));
+  margin: 0 auto;
+  padding: 112px 0 118px;
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  column-gap: 10%;
+  align-items: start;
+}
+
+.cs-intro > .cs-eyebrow {
+  grid-column: 1 / -1;
+  margin-bottom: 27px;
+}
+
+.cs-intro h2,
+.cs-events h2,
+.cs-contact h2,
+.cs-moment h2,
+.cs-statement h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  letter-spacing: -.035em;
+}
+
+.cs-intro h2 {
+  margin: 0;
+  font-size: clamp(42px, 5vw, 66px);
+  line-height: 1.08;
+}
+
+.cs-intro > p {
+  max-width: 650px;
+  margin: 5px 0 0;
+  color: var(--cs-muted);
+  font-size: 14px;
+  line-height: 2;
+}
+
+/* MOMENTOS — bloques fotográficos equivalentes a image-story / events */
+
+.cs-moment {
+  min-height: 570px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  gap: 0;
+  background: var(--cs-bg-soft);
+}
+
+.cs-moment-closeup {
+  background: #eeece7;
+}
+
+.cs-moment-stage {
+  background: #f8f7f4;
+}
+
+.cs-moment-media,
+.cs-moment-image {
+  width: 100%;
+  min-width: 0;
+  min-height: 570px;
+  overflow: hidden;
+}
+
+.cs-moment-media video,
+.cs-moment-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 570px;
+  max-height: none;
+  aspect-ratio: auto;
+  object-fit: cover;
+  background: var(--cs-dark);
+}
+
+.cs-moment-content {
+  max-width: 680px;
+  align-self: center;
+  padding: 75px clamp(42px, 7vw, 112px);
+}
+
+.cs-moment-closeup .cs-moment-content {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.cs-moment-closeup .cs-moment-media {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.cs-moment-stage .cs-moment-content {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.cs-moment-stage .cs-moment-image {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.cs-number {
+  display: block;
+  margin-bottom: 22px;
+  color: var(--cs-bronze);
+  font-family: 'Playfair Display', serif;
+  font-size: 27px;
+  line-height: 1.2;
+}
+
+.cs-category {
+  display: block;
+  margin-bottom: 17px;
+  color: var(--cs-muted);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 1.6;
+}
+
+.cs-moment h2 {
+  margin: 0 0 16px;
+  font-size: clamp(40px, 4.3vw, 58px);
+  line-height: 1.08;
+}
+
+.cs-lead {
+  margin: 0 0 18px;
+  color: var(--cs-bronze);
+  font-family: 'Playfair Display', serif;
+  font-size: 21px;
+  line-height: 1.45;
+}
+
+.cs-moment-content > p:not(.cs-lead) {
+  margin: 0;
+  color: var(--cs-muted);
+  font-size: 14px;
+  line-height: 1.95;
+}
+
+.cs-duration {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid var(--cs-line);
+  color: var(--cs-ink);
+  font-size: 12px;
+}
+
+.cs-duration i {
+  color: var(--cs-bronze);
+  font-size: 15px;
+}
+
+/* CIERRE — sección oscura equivalente al contacto de closeup.html */
+
+.cs-statement {
+  padding: 115px 25px 120px;
+  background: var(--cs-dark);
+  color: #fff;
+  text-align: center;
+}
+
+.cs-statement .cs-eyebrow {
+  color: #c6a27b;
+}
+
+.cs-statement h2 {
+  max-width: 850px;
+  margin: 0 auto;
+  font-size: clamp(42px, 5.3vw, 68px);
+  line-height: 1.1;
+}
+
+.cs-statement > p {
+  max-width: 610px;
+  margin: 25px auto 0;
+  color: rgba(255,255,255,.68);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* EVENTOS */
+
+.cs-events {
+  padding: 112px 25px 120px;
+  text-align: center;
+  background: var(--cs-bg);
+}
+
+.cs-events > .cs-eyebrow {
+  margin-bottom: 18px;
+}
+
+.cs-events h2 {
+  margin: 0 0 55px;
+  font-size: clamp(42px, 5vw, 64px);
+  line-height: 1.1;
+}
+
+.cs-events-grid {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 45px;
+  text-align: left;
+}
+
+.cs-events-grid > div {
+  padding: 32px 28px 15px;
+  border-top: 1px solid var(--cs-line);
+}
+
+.cs-events-grid i {
+  margin-bottom: 20px;
+  color: var(--cs-bronze);
+  font-size: 22px;
+}
+
+.cs-events-grid h3 {
+  margin: 0 0 12px;
+  font-family: 'Playfair Display', serif;
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.cs-events-grid p {
+  margin: 0;
+  color: var(--cs-muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* CONTACTO — mismo fondo, jerarquía y espaciado que .cu-contact */
+
+.cs-contact {
+  padding: 120px 25px;
+  background: var(--cs-dark);
+  color: #fff;
+  text-align: center;
+}
+
+.cs-contact > .cs-eyebrow {
+  color: #c6a27b;
+  margin-bottom: 0;
+}
+
+.cs-contact h2 {
+  margin: 25px 0;
+  font-size: clamp(48px, 6vw, 78px);
+  line-height: 1.08;
+}
+
+.cs-contact > p {
+  max-width: 580px;
+  margin: 0 auto 35px;
+  color: rgba(255,255,255,.7);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.cs-contact .cs-button-dark {
+  border-color: rgba(255,255,255,.75);
+  background: transparent;
+  color: #fff !important;
+}
+
+.cs-contact .cs-button-dark:hover {
+  background: #fff;
+  color: var(--cs-dark) !important;
+}
+
+/* FOOTER — una sola franja, como .cu-footer */
+
+.cs-footer {
+  min-height: 100px;
+  padding: 25px 5.5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: #11100f;
+  color: #fff;
+  text-align: left;
+}
+
+.cs-footer-logo {
+  color: #fff !important;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.cs-footer-logo img { display: none; }
+
+.cs-footer > p { display: none; }
+
+.cs-footer > span,
+.cs-footer small {
+  color: rgba(255,255,255,.55);
+  font-size: 9px;
+  letter-spacing: 1.8px;
+}
+
+/* WHATSAPP */
+
+.cs-whatsapp {
+  position: fixed;
+  z-index: 50;
+  right: 24px;
+  bottom: 24px;
+  display: flex;
+  width: 54px;
+  height: 54px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff !important;
+  font-size: 26px;
+  box-shadow: 0 4px 18px rgba(0,0,0,.2);
+  transition: transform .3s ease;
+}
+
+.cs-whatsapp:hover { transform: scale(1.08); }
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .cs-hero {
+    min-height: 600px;
+    height: 64vh;
+    max-height: 700px;
+  }
+
+  .cs-hero-content {
+    width: 84%;
+    margin-left: 8%;
+  }
+
+  .cs-intro {
+    width: calc(100% - 72px);
+    column-gap: 7%;
+    padding: 90px 0;
+  }
+
+  .cs-intro h2 { font-size: clamp(40px, 6vw, 56px); }
+
+  .cs-moment { min-height: 500px; }
+
+  .cs-moment-media,
+  .cs-moment-image,
+  .cs-moment-media video,
+  .cs-moment-image img {
+    min-height: 500px;
+  }
+
+  .cs-moment-content {
+    padding: 55px 7%;
+  }
+
+  .cs-moment h2 { font-size: 42px; }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .cs-header {
+    height: 70px;
+    padding: 0 5%;
+  }
+
+  .cs-logo {
+    font-size: 11px;
+    letter-spacing: 2.5px;
+  }
+
+  .cs-back {
+    min-height: 40px;
+    padding: 7px 10px;
+    gap: 6px;
+    font-size: 10px;
+  }
+
+  .cs-back-arrow { font-size: 16px; }
+
+  .cs-hero {
+    min-height: 620px;
+    height: auto;
+    max-height: none;
+    padding: 55px 0;
+  }
+
+  .cs-hero-image { background-position: 58% center; }
+
+  .cs-hero-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(15,13,12,.88) 0%,
+      rgba(15,13,12,.62) 65%,
+      rgba(15,13,12,.35) 100%
+    );
+  }
+
+  .cs-hero-content {
+    width: 88%;
+    margin: 0 auto;
+    padding: 25px 0;
+  }
+
+  .cs-hero .cs-eyebrow {
+    margin-bottom: 22px;
+    font-size: 10px;
+  }
+
+  .cs-hero h1 {
+    margin-bottom: 21px;
+    font-size: clamp(48px, 11vw, 64px);
+    line-height: 1.02;
+  }
+
+  .cs-hero-content > p {
+    max-width: 440px;
+    margin-bottom: 27px;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .cs-button {
+    min-height: 52px;
+    padding: 13px 16px;
+    font-size: 10px;
+  }
+
+  .cs-intro {
+    width: auto;
+    margin: 0;
+    padding: 78px 7%;
+    display: block;
+  }
+
+  .cs-intro > .cs-eyebrow { margin-bottom: 22px; }
+
+  .cs-intro h2 {
+    margin-bottom: 24px;
+    font-size: clamp(39px, 10vw, 48px);
+    line-height: 1.1;
+  }
+
+  .cs-intro > p {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .cs-moment {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    min-height: 0;
+    padding: 0;
+  }
+
+  .cs-moment-media,
+  .cs-moment-image {
+    min-height: 0;
+    height: auto;
+    order: 1;
+  }
+
+  .cs-moment-media video,
+  .cs-moment-image img {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    max-height: 540px;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+
+  .cs-moment-content {
+    width: 100%;
+    max-width: none;
+    padding: 48px 7% 58px;
+    order: 2;
+  }
+
+  .cs-number {
+    margin-bottom: 17px;
+    font-size: 25px;
+  }
+
+  .cs-category {
+    margin-bottom: 13px;
+    font-size: 9px;
+  }
+
+  .cs-moment h2 {
+    margin-bottom: 13px;
+    font-size: 42px;
+  }
+
+  .cs-lead { font-size: 20px; }
+
+  .cs-moment-content > p:not(.cs-lead) {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  .cs-duration { margin-top: 23px; }
+
+  .cs-statement { padding: 82px 7%; }
+
+  .cs-statement h2 {
+    font-size: clamp(37px, 9vw, 48px);
+    line-height: 1.12;
+  }
+
+  .cs-statement > p {
+    margin-top: 20px;
+    font-size: 13px;
+  }
+
+  .cs-events { padding: 82px 7%; }
+
+  .cs-events h2 {
+    margin-bottom: 35px;
+    font-size: 42px;
+  }
+
+  .cs-events-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .cs-events-grid > div { padding: 27px 8px 14px; }
+
+  .cs-contact { padding: 88px 7%; }
+
+  .cs-contact h2 {
+    margin: 22px 0;
+    font-size: clamp(45px, 10vw, 58px);
+  }
+
+  .cs-contact > p { font-size: 13px; }
+
+  .cs-footer {
+    min-height: 100px;
+    padding: 25px 7%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px;
+    text-align: center;
+  }
+
+  .cs-footer-logo { width: 100%; }
+
+  .cs-footer > span,
+  .cs-footer small {
+    font-size: 8px;
+    letter-spacing: 1.2px;
+  }
+
+  .cs-whatsapp {
+    right: 17px;
+    bottom: 17px;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
