@@ -1,0 +1,223 @@
+
+/* =========================================================
+   PREGUNTAS FRECUENTES — MATI ZARANTO
+   Identidad visual: closeup.html
+========================================================= */
+
+:root {
+    --faq-bg: #f8f7f4;
+    --faq-ink: #25221f;
+    --faq-muted: #77716b;
+    --faq-bronze: #a18465;
+    --faq-line: #ded9d1;
+    --faq-dark: #171513;
+    --faq-light: #ffffff;
+}
+
+/* BASE */
+
+body {
+    background: var(--faq-bg);
+    color: var(--faq-ink);
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* HEADER */
+
+.show-header {
+    background: var(--faq-bg);
+    border-bottom: 1px solid var(--faq-line);
+}
+
+.show-logo {
+    color: var(--faq-ink);
+    letter-spacing: 0.12em;
+}
+
+.show-back {
+    color: var(--faq-muted);
+    border: 1px solid var(--faq-line);
+    transition: all 0.3s ease;
+}
+
+.show-back:hover {
+    color: var(--faq-bronze);
+    border-color: var(--faq-bronze);
+}
+
+/* HERO */
+
+.show-title {
+    background: var(--faq-bg);
+    color: var(--faq-ink);
+    padding: 100px 24px 75px;
+}
+
+.show-label {
+    color: var(--faq-bronze);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    font-weight: 600;
+}
+
+.show-title h1 {
+    color: var(--faq-ink);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.6rem, 5vw, 4.5rem);
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 20px 0;
+}
+
+.show-title p {
+    color: var(--faq-muted);
+    max-width: 650px;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* CONTENIDO */
+
+.show-details {
+    background: var(--faq-bg);
+    color: var(--faq-ink);
+    padding: 65px 24px 100px;
+}
+
+.show-details-inner {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.show-details h2 {
+    color: var(--faq-ink);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.9rem, 3vw, 2.6rem);
+    font-weight: 400;
+    margin: 14px 0 35px;
+}
+
+/* SEPARACIÓN ENTRE CATEGORÍAS */
+
+.faq-section-label {
+    display: block;
+    margin-top: 75px;
+}
+
+/* PREGUNTAS Y RESPUESTAS */
+
+.faq-preview {
+    border-top: 1px solid var(--faq-line);
+}
+
+.faq-preview h3 {
+    color: var(--faq-ink);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0;
+    padding: 25px 0 10px;
+}
+
+.faq-preview p {
+    color: var(--faq-muted);
+    font-size: 0.98rem;
+    line-height: 1.85;
+    margin: 0;
+    padding: 0 0 25px;
+    border-bottom: 1px solid var(--faq-line);
+}
+
+/* CTA */
+
+.show-cta {
+    background: var(--faq-dark);
+    color: var(--faq-light);
+    padding: 85px 24px;
+    text-align: center;
+}
+
+.show-cta h2 {
+    color: var(--faq-light);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+    margin-bottom: 18px;
+}
+
+.show-cta p {
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 570px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+}
+
+.show-cta-button {
+    display: inline-block;
+    background: var(--faq-bronze);
+    color: #fff;
+    padding: 14px 28px;
+    text-decoration: none;
+    border: 1px solid var(--faq-bronze);
+    transition: all 0.3s ease;
+}
+
+.show-cta-button:hover {
+    background: transparent;
+    color: #fff;
+    border-color: #c2a98d;
+}
+
+/* FOOTER */
+
+.show-footer {
+    background: var(--faq-dark);
+    color: rgba(255, 255, 255, 0.6);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.show-footer p {
+    margin: 0;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .show-title {
+        padding: 75px 22px 55px;
+    }
+
+    .show-details {
+        padding: 45px 22px 70px;
+    }
+
+    .show-details h2 {
+        margin-bottom: 25px;
+    }
+
+    .faq-section-label {
+        margin-top: 55px;
+    }
+
+    .faq-preview h3 {
+        font-size: 1rem;
+        padding-top: 22px;
+    }
+
+    .faq-preview p {
+        font-size: 0.94rem;
+        line-height: 1.75;
+    }
+
+    .show-cta {
+        padding: 65px 22px;
+    }
+
+}
