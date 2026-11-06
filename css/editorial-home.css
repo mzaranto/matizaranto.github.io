@@ -144,7 +144,7 @@ button {
   align-items: center;
   overflow: hidden;
   background-color: #171717;
-  background-image: linear-gradient(90deg, rgba(8, 9, 11, .82) 0%, rgba(8, 9, 11, .66) 34%, rgba(8, 9, 11, .28) 67%, rgba(8, 9, 11, .12) 100%), url('../img/portada.png');
+  background-image: linear-gradient(90deg, rgba(8, 9, 11, .82) 0%, rgba(8, 9, 11, .66) 34%, rgba(8, 9, 11, .28) 67%, rgba(8, 9, 11, .12) 100%), url('../img/portada.webp');
   background-position: center, center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -837,7 +837,7 @@ button {
             rgba(8,9,11,.58) 48%,
             rgba(8,9,11,.25) 100%
         ),
-        url('../img/portada.png');
+        url('../img/portada.webp');
     background-position: center, 58% center;
     background-size: cover;
     background-repeat: no-repeat;
