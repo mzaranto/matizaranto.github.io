@@ -1,55 +1,69 @@
+
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
 
 <head>
-   <!-- Google tag (gtag.js) -->
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0EGZ3QR1SS"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-0EGZ3QR1SS');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-0EGZ3QR1SS');
     </script>
-    <meta charset="UTF-8">
 
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- fragmentos Style -->
-    <link href="../css/productos.css" rel="stylesheet">
-    <title>Fragmentos — Mati Zaranto</title>
+
+    <title>Fragmentos | Book Test </title>
 
     <meta
         name="description"
-        content="Fragmentos — Book Test de mentalismo creado por Mati Zaranto."
+        content="Fragmentos es un book test creado por Mati Zaranto. Un libro de apariencia convencional con múltiples posibilidades para desarrollar efectos y rutinas de mentalismo."
     >
 
-  
+    <meta name="author" content="Mati Zaranto">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="product">
+    <meta property="og:title" content="Fragmentos | Book Test de Mentalismo">
+    <meta
+        property="og:description"
+        content="Un libro. Muchas posibilidades. Descubrí Fragmentos, un book test creado para explorar nuevas experiencias de mentalismo."
+    >
+    <meta property="og:image" content="https://matizaranto.com.ar/img/fragmentos/fragmentos_libro.png">
+    <meta property="og:locale" content="es_AR">
+
+    <!-- Estilos -->
+    <link href="../css/productos.css" rel="stylesheet">
+
+    <!-- Datos estructurados -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Fragmentos",
+        "description": "Book test de mentalismo creado por Mati Zaranto. Un libro de apariencia convencional con diferentes propiedades y posibilidades para desarrollar efectos y rutinas.",
+        "image": "https://matizaranto.com.ar/img/fragmentos/fragmentos_libro.png",
+        "brand": {
+            "@type": "Brand",
+            "name": "Mati Zaranto"
+        },
+        "category": "Accesorios y material para mentalismo"
+    }
+    </script>
 
 </head>
 
-
 <body>
-
-
-    <!-- HEADER -->
-
-    <header>
-
-        <a href="index.html" class="back">
-            ← Volver
-        </a>
-
-    </header>
-
-
 
     <!-- HERO -->
 
     <section class="hero">
 
-        <div class="eyebrow">
-            Book Test · Mentalismo
-        </div>
 
         <h1>
             Fragmentos
@@ -61,21 +75,22 @@
         </div>
 
         <p class="hero-text">
-            Un libro creado para el mentalismo.
-            Una obra que parece convencional,
-            pero que esconde diferentes sistemas
-            y posibilidades para construir
-            múltiples efectos y presentaciones.
+            Un libro de apariencia convencional,
+            creado para explorar las posibilidades
+            del mentalismo.
+
+            Una herramienta versátil que reúne
+            diferentes recursos para construir
+            experiencias, revelaciones y múltiples
+            presentaciones.
         </p>
 
     </section>
 
 
-
     <!-- PROJECT -->
 
     <section class="project">
-
 
         <!-- BOOK -->
 
@@ -83,11 +98,13 @@
 
             <img
                 src="../img/fragmentos/fragmentos_libro.png"
-                alt="Portada de Fragmentos"
+                alt="Fragmentos, book test de mentalismo creado por Mati Zaranto"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
             >
 
         </div>
-
 
 
         <!-- INFORMATION -->
@@ -95,7 +112,7 @@
         <div class="project-info">
 
             <div class="eyebrow">
-                Sobre el proyecto
+                SOBRE EL PROYECTO
             </div>
 
             <h2>
@@ -104,19 +121,32 @@
             </h2>
 
             <p>
-                Fragmentos fue diseñado para integrarse
-                de manera natural en una presentación
+                Fragmentos es un book test diseñado para
+                integrarse naturalmente en una presentación
                 de mentalismo.
 
-                Sus diferentes propiedades permiten
-                trabajar con palabras, números, nombres,
-                ciudades, fechas, horarios, ideas y otras
-                variables para construir diferentes
-                efectos y rutinas.
+                Detrás de su apariencia de libro convencional
+                se encuentran diferentes propiedades que
+                permiten explorar múltiples caminos y
+                posibilidades de presentación.
             </p>
 
+            <p>
+                Palabras, números, nombres, ciudades,
+                fechas, horarios e ideas pueden convertirse
+                en el punto de partida para desarrollar
+                distintos efectos y construir rutinas
+                propias.
+            </p>
 
-            <!-- PDF -->
+            <p>
+                Una herramienta pensada para ampliar
+                las posibilidades del mentalista y
+                ofrecer nuevas formas de sorprender
+                a sus espectadores.
+            </p>
+
+            <!-- MANUAL -->
 
             <div class="download">
 
@@ -127,7 +157,7 @@
                     </span>
 
                     <span class="download-description">
-                        PDF · Manual de instrucciones
+                        PDF · Instrucciones y funcionamiento
                     </span>
 
                 </div>
@@ -135,9 +165,10 @@
                 <a
                     href="../booktest/manual_fragmentos.pdf"
                     target="_blank"
+                    rel="noopener noreferrer"
                     class="download-button"
                 >
-                    Descargar
+                    Ver manual
                 </a>
 
             </div>
@@ -147,6 +178,10 @@
     </section>
 
 
+    <!-- POSSIBILITIES -->
+
+   
+
 
     <!-- TUTORIAL -->
 
@@ -155,19 +190,24 @@
         <div class="tutorial-header">
 
             <div class="eyebrow">
-                Tutorial
+                APRENDIZAJE
             </div>
 
             <h2>
-                Cómo trabajar<br>
-                con Fragmentos.
+                Descubrí cómo funciona<br>
+                Fragmentos.
             </h2>
 
             <p>
-                En esta serie de videos vas a encontrar
-                el funcionamiento del libro, sus diferentes
-                propiedades y las posibilidades que ofrece
-                para construir efectos de mentalismo.
+                El material de aprendizaje te acompaña
+                en el conocimiento del libro, sus
+                diferentes propiedades y las posibilidades
+                que ofrece.
+
+                A través de los tutoriales vas a poder
+                comprender su funcionamiento y explorar
+                distintas formas de incorporarlo a tus
+                presentaciones.
             </p>
 
         </div>
@@ -179,7 +219,9 @@
 
             <iframe
                 src="https://www.youtube.com/embed/VIDEO_ID"
-                title="Tutorial Fragmentos"
+                title="Tutorial de Fragmentos - Book Test de Mentalismo de Mati Zaranto"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen>
             </iframe>
@@ -188,6 +230,8 @@
 
     </section>
 
+
+    <!-- CIERRE -->
 
 
     <!-- FOOTER -->
